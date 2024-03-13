@@ -1,7 +1,9 @@
 class Solution {
 public:
     int romanToInt(string romanNumbers) {
-        int arabicNumbers = 0;
+        int numbers = 0;
+        int& arabicNumbers = numbers;
+        
      for (int i = 0; i < romanNumbers.size(); i++)
 {
 	if (romanNumbers[i] == 'I' && romanNumbers[i + 1] == 'V') {
@@ -12,7 +14,7 @@ public:
 
 
 	if (romanNumbers[i] == 'I' && romanNumbers[i + 1] == 'X') {
-		arabicNumbers += 9;
+	   arabicNumbers += 9;
 		romanNumbers[i] = 'o';
 		romanNumbers[i + 1] = 'o';
 	}
